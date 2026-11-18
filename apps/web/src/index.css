@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "DM Sans", sans-serif;
+  overflow-x: clip;
+  @apply text-foreground bg-background;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-foreground;
+}
+
+p, span, div, label {
+  @apply text-foreground;
+}
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 144 61% 20%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142 76% 36%;
+    --radius: 0.5rem;
+    
+    --node-bg: 240 5% 11%;
+    --node-border: 240 6% 20%;
+    --port-color: 142 76% 36%;
+    --connection-line: 142 76% 36%;
+    --success: 142 76% 36%;
+    --error: 0 84% 60%;
+    --warning: 38 92% 50%;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer utilities {
+  .node-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .connection-glow {
+    filter: drop-shadow(0 0 4px hsl(var(--connection-line)));
+  }
+  
+  .execution-log-entry {
+    border-left: 3px solid transparent;
+    padding-left: 0.75rem;
+  }
+  
+  .execution-log-entry.info {
+    border-left-color: hsl(var(--primary));
+  }
+  
+  .execution-log-entry.success {
+    border-left-color: hsl(var(--success));
+  }
+  
+  .execution-log-entry.error {
+    border-left-color: hsl(var(--error));
+  }
+  
+  .execution-log-entry.warning {
+    border-left-color: hsl(var(--warning));
+  }
+  
+  .text-visible {
+    @apply text-foreground font-medium;
+  }
+  
+  .text-visible-bold {
+    @apply text-foreground font-bold;
+  }
+  
+  .text-visible-lg {
+    @apply text-foreground font-semibold text-lg;
+  }
+  
+  .text-visible-xl {
+    @apply text-foreground font-bold text-xl;
+  }
+}
