@@ -100,3 +100,8 @@ Open [http://localhost:5000/estimation](http://localhost:5000/estimation). The V
 - The browser stores the current session ID in `sessionStorage`.
 - Messages are sent to the AI provider configured for the server so it can generate replies.
 - Estimates are planning aids, not guarantees; actual project effort and cost depend on the project and the assumptions used.
+
+## Screenshots
+
+### Chat Interface
+![Chat Interface](screenshots/01-conversation.png)
